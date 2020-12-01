@@ -5,7 +5,7 @@
  *  # Available input commands:
  *  ## insert string a -- puts a into set (if a is in set, nothing will happen)
  *  ## delete string a -- delete a (if a is not in set, nothing will happen)
- *  ## exists string a -- check if a in set (returns bool)
+ *  ## exists string a -- check if a in set (returns Node pointer or nullptr)
  *  __________________________
  *  # Input sample at main/cpp/input/set.in
  *  # Output sample at main/cpp/output/set.out
