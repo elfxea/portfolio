@@ -4,8 +4,8 @@
  *  __________________________
  *  # Available input commands:
  *  ## put string key string value adds pair key: value to map or updates existing key value
- *  ## delete string a -- delete a (if a is not in map, nothing will happen)
- *  ## get string a -- gets value of a or "none" if key 'a' not found
+ *  ## delete string key -- delete key (if key is not in map, nothing will happen)
+ *  ## get string key -- gets key value or "none" if key not found
  *  __________________________
  *  # Input sample at main/cpp/input/map.in
  *  # Output sample at main/cpp/output/map.out
@@ -38,10 +38,7 @@ private:
 
 public:
     map() {
-        vector<Node> tmp;
-        for (int i = 0; i < SIZE; ++i) {
-            hashTable.push_back(tmp);
-        }
+        hashTable.resize(SIZE);
     }
 
     Node *find(string *key) {
