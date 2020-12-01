@@ -24,18 +24,17 @@ struct Node {
 class set {
 private:
     const int SIZE = 1000000;
-    const int ASCII_SIZE = 26;
+    const int ASCII_SIZE = 62;
+    vector<vector<Node>> hashTable;
 
     int hash(auto *value) { // returns hash of key
         int result = 0;
         for (char symbol : *value) {
-            result = (int) abs(ASCII_SIZE * result + (symbol - 'a') + 1);
+            result = (int) abs(ASCII_SIZE * result + (symbol - '0') + 1);
             result %= SIZE;
         }
         return abs(result);
     }
-
-    vector<vector<Node>> hashTable;
 
 public:
     set() { // Constructor
