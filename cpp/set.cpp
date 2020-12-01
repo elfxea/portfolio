@@ -53,22 +53,22 @@ public:
     void add(auto *element) { // Adds element to set if element does not exist
         Node *currentNode = find(element);
         if (currentNode == nullptr) { // if Node not found
-            int index = hash(element);
+            int keyIndex = hash(element);
             Node tmp;
             tmp.value = *element;
-            hashTable[index].push_back(tmp);
+            hashTable[keyIndex].push_back(tmp);
         } else {
             currentNode->value = *element;
         }
     }
 
     void remove(auto *element) { // removes element from set
-        int index = hash(element);
-        auto currentIterator = hashTable[index].begin(); // __normal__iterator for hashTable[index]
+        int keyIndex = hash(element);
+        auto currentIterator = hashTable[keyIndex].begin(); // __normal__iterator for hashTable[index]
 
-        for (int i = 0; i < hashTable[index].size(); ++i) {
-            if (hashTable[index][i].value == *element) {
-                hashTable[index].erase(currentIterator + i);
+        for (int i = 0; i < hashTable[keyIndex].size(); ++i) {
+            if (hashTable[keyIndex][i].value == *element) {
+                hashTable[keyIndex].erase(currentIterator + i);
                 return;
             }
         }
@@ -82,13 +82,13 @@ public:
 int main() {
     ifstream fin("set.in");
     ofstream fout("set.out");
-    
+
     //      ios_base::sync_with_stdio(false);
     //      fin.tie(NULL);
 
     string command, element;
     set sampleSet;
-    
+
     while (fin >> command) {
         if (command == "insert") {
             fin >> element;
@@ -102,7 +102,7 @@ int main() {
             sampleSet.remove(&element);
         }
     }
-    
+
     fout.close();
     fin.close();
 
