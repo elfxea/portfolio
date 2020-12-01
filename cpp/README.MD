@@ -1,6 +1,6 @@
 ## CPP code samples
 Generally, this folder contains my favourite labs at Algorythms and Data Structures for first course.
-### Setup
+### Config
 Running on Windows Subsystem for Linux (Ubuntu 20.04.1 LTS)
 
 GCC version: 4:9.3.0-1ubuntu2
