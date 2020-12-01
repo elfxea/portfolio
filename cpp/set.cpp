@@ -7,8 +7,8 @@
  *  ## delete string a -- delete a (if a is not in set, nothing will happen)
  *  ## exists string a -- check if a in set (returns bool)
  *  __________________________
- *  # Input sample at main/cpp/ioSamples/Set/set.in
- *  # Output sample at main/cpp/ioSamples/Set/set.out
+ *  # Input sample at main/cpp/input/set.in
+ *  # Output sample at main/cpp/output/set.out
  *
  */
 
