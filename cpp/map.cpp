@@ -3,9 +3,9 @@
  *  Sample #2: map structure using hashtable
  *  __________________________
  *  # Available input commands:
- *  ## put string key string value adds pair key: value to map or updates existing key value
+ *  ## put string key string value -- adds pair key: value to map or updates existing key value
  *  ## delete string key -- delete key (if key is not in map, nothing will happen)
- *  ## get string key -- gets key value or "none" if key not found
+ *  ## get string key -- returns key value or "none" if key not found
  *  __________________________
  *  # Input sample at main/cpp/input/map.in
  *  # Output sample at main/cpp/output/map.out
