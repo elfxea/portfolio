@@ -23,7 +23,7 @@ struct Node {
     string key;
     string value;
 
-    int order = -1; // variable to get previous and next elements from order array faster
+    int order = 0; // variable to get previous and next elements from order array faster
 };
 
 class linkedMap {
